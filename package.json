@@ -17,7 +17,7 @@
     "build:cjs": "tsc --module commonjs --outDir lib/cjs"
  },
   "keywords": [],
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/styled-components": "^5.1.11",
     "@typescript-eslint/eslint-plugin": "^4.28.5",
