@@ -1,5 +1,8 @@
 import { css, FlattenSimpleInterpolation } from 'styled-components';
-import { convertPixelToRem, getPixel, PixelStringOptions } from './sizing';
+
+import { convertPixelToRem, getPixel } from './sizing';
+
+import { PixelStringOptions } from './types';
 
 export interface ScrollBarOptions {
   width?: number | PixelStringOptions;

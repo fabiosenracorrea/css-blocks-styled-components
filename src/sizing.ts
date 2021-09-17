@@ -2,15 +2,7 @@ import { css, FlattenSimpleInterpolation } from 'styled-components';
 
 import { PIXEL_TO_REM } from './utils/constants';
 
-export type PixelStringOptions =
-  | 'auto'
-  | 'fit-content'
-  | 'min-content'
-  | 'max-content'
-  | 'inherit'
-  | 'unset';
-
-export type PixelOptions = number | PixelStringOptions;
+import { PixelOptions } from './types';
 
 export interface BoxGetterOptions {
   useRem?: boolean;

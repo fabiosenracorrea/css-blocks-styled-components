@@ -1,9 +1,9 @@
 /* eslint-disable camelcase */
 import { css, FlattenSimpleInterpolation } from 'styled-components';
 
-import { joinPixelArray } from '../marginPaddings';
 import { convertCamelToCSS } from '../utils/camelToCss';
 import { EMPTY_STRING } from '../utils/constants';
+import { joinPixelArray } from '../utils/helpers';
 
 type BaseAlignmentOption = 'flex-start' | 'flex-end' | 'center';
 
