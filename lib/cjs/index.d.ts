@@ -1,4 +1,5 @@
-export declare const flexAlignCenter: import("styled-components").FlattenSimpleInterpolation;
-export declare const flexBetween: import("styled-components").FlattenSimpleInterpolation;
-export declare const flexMiddle: import("styled-components").FlattenSimpleInterpolation;
-export declare const flexJustifyCenter: import("styled-components").FlattenSimpleInterpolation;
+export * from './displays';
+export * from './appearance';
+export * from './marginPaddings';
+export * from './displays';
+export * from './sizing';
