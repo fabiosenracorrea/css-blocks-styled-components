@@ -2,6 +2,7 @@
 import { css, FlattenSimpleInterpolation } from 'styled-components';
 
 import { joinPixelArray } from '../marginPaddings';
+import { convertCamelToCSS } from '../utils/camelToCss';
 import { EMPTY_STRING } from '../utils/constants';
 
 type BaseAlignmentOption = 'flex-start' | 'flex-end' | 'center';
@@ -13,17 +14,6 @@ interface FlexGetterOps {
   justifyContent?: BaseAlignmentOption | 'space-between' | 'space-around' | 'space-evenly';
   alignContent?: BaseAlignmentOption | 'stretch' | 'space-between' | 'space-around';
   gap?: [number] | [number, number];
-}
-
-const CAPITALIZED_LETTER = /[A-Z]/g;
-
-function convertCamelToCSS(camelCaseProp: string): string {
-  const asCSSformatted = camelCaseProp.replace(
-    CAPITALIZED_LETTER,
-    (matched) => `-${matched.toLowerCase()}`,
-  );
-
-  return asCSSformatted;
 }
 
 export function getFlexCSS(
