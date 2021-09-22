@@ -2,7 +2,7 @@
   "homepage": "https://github.com/fabiosenracorrea/css-blocks-styled-components",
   "author": "fabiosenracorrea",
   "name": "css-blocks-styled-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A set of helpers to styled components",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
