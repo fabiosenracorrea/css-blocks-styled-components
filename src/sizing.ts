@@ -11,7 +11,7 @@ export interface BoxGetterOptions {
 export function getPixel(px: PixelOptions): string {
   if (typeof px === 'string') return px;
 
-  return `${px / PIXEL_TO_REM}px`;
+  return `${px}px`;
 }
 
 export function convertPixelToRem(px: PixelOptions): string {
