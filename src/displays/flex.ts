@@ -42,6 +42,11 @@ export function getFlexCSS(
   LESS CALCULATION OPTIONS
 */
 
+export const flexColumn = css`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const flexAlignCenter = css`
   display: flex;
   align-items: center;
@@ -72,7 +77,17 @@ export const flexJustifyCenter = css`
   justify-content: center;
 `;
 
+export const flexJustifyStart = css`
+  display: flex;
+  justify-content: center;
+`;
+
 export const flexJustifyCenterColumn = css`
+  ${flexJustifyCenter}
+  flex-direction: column;
+`;
+
+export const flexJustifyStartColumn = css`
   ${flexJustifyCenter}
   flex-direction: column;
 `;
@@ -82,12 +97,30 @@ export const flex = {
   alignCenterWrap: getFlexCSS({ flexWrap: 'wrap' }, flexAlignCenter),
   alignCenterColumn: flexAlignCenterColumn,
   alignCenterColumnWrap: getFlexCSS({ flexWrap: 'wrap' }, flexAlignCenterColumn),
+
+  column: getFlexCSS({ flexDirection: 'column' }),
+
   between: flexBetween,
   betweenWrap: getFlexCSS({ flexWrap: 'wrap' }, flexBetween),
+
+  spaceAroundAlignCenter: getFlexCSS({ justifyContent: 'space-around' }, flexAlignCenter),
+  spaceAroundAlingeCenterWrap: getFlexCSS(
+    { flexWrap: 'wrap', justifyContent: 'space-around' },
+    flexAlignCenter,
+  ),
+
   middle: flexMiddle,
   middleWrap: getFlexCSS({ flexWrap: 'wrap' }, flexMiddle),
   middleColumn: flexMiddleColumn,
+
   justifyCenter: flexJustifyCenter,
   justifyCenterColumn: flexJustifyCenterColumn,
   justifyCenterColumnWrap: getFlexCSS({ flexWrap: 'wrap' }, flexJustifyCenterColumn),
+  justifyStart: flexJustifyStart,
+  justifyStartColumn: flexJustifyStartColumn,
+  justifyStartColumnWrap: getFlexCSS({ flexWrap: 'wrap' }, flexJustifyStartColumn),
+
+  justifyEnd: getFlexCSS({ justifyContent: 'flex-end' }),
+  justifyEndColumn: getFlexCSS({ justifyContent: 'flex-end' }, flexColumn),
+  justifyEndColumnWrap: getFlexCSS({ flexWrap: 'wrap', justifyContent: 'flex-end' }, flexColumn),
 };

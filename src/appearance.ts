@@ -51,3 +51,10 @@ export function getScrollbarStyle({
     }
   `;
 }
+
+export const getGradientText = (gradient: string): FlattenSimpleInterpolation => css`
+  background: ${gradient};
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;

@@ -19,9 +19,17 @@ export const MinimalistGlobalStyle = createGlobalStyle`
     }
   }
 
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+
+
   button {
     cursor: pointer;
-    font: inherit;
   }
 
   a {
